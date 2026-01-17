@@ -1,0 +1,12 @@
+# --- never commit secrets ---
+secrets/
+**/*.pem
+**/*.key
+**/*.crt
+**/*token*
+**/*credentials*
+**/*.json
+
+# local/editor files
+.DS_Store
+*.swp

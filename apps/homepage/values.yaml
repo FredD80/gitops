@@ -1,0 +1,64 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/gethomepage/homepage
+  tag: v1.2.0
+  pullPolicy: IfNotPresent
+
+controller:
+  type: deployment
+
+service:
+  main:
+    type: ClusterIP
+    ports:
+      http:
+        port: 3000
+
+ingress:
+  main:
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    className: nginx
+    enabled: true
+    hosts:
+      - host: home.multiverse.local
+        paths:
+          - path: /
+            pathType: Prefix
+            service:
+              name: homepage
+              port: 3000
+
+      - host: home.chelseablue.cloud
+        paths:
+          - path: /
+            pathType: Prefix
+            service:
+              name: homepage
+              port: 3000
+env:
+  - name: HOMEPAGE_ALLOWED_HOSTS
+    value: "home.multiverse.local,home.multiverse.local:80,home.chelseablue.cloud,home.chelseablue.cloud:443"
+config:
+  settings.yaml: |
+    title: Multiverse
+    description: Cluster Command Center
+    theme: dark
+
+  services.yaml: |
+    - Platform:
+        - Jenkins:
+            href: http://192.168.1.202:8080
+            description: CI/CD
+
+  widgets.yaml: |
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+        nodes:
+          show: true
+          cpu: true
+          memory: true
