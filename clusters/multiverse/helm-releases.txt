@@ -1,0 +1,12 @@
+NAME                         	NAMESPACE      	REVISION	UPDATED                                  	STATUS  	CHART                                 	APP VERSION
+cilium                       	kube-system    	2       	2026-01-12 21:47:46.961395745 -0500 -0500	deployed	cilium-1.18.5                         	1.18.5     
+grafana                      	monitoring     	1       	2026-01-15 18:29:38.661595636 -0500 -0500	deployed	grafana-10.5.8                        	12.3.1     
+ingress-nginx                	ingress-nginx  	1       	2026-01-14 18:11:06.690664962 -0500 -0500	deployed	ingress-nginx-4.14.1                  	1.14.1     
+kps                          	monitoring     	1       	2026-01-15 15:12:52.775535309 -0500 -0500	deployed	kube-prometheus-stack-80.14.4         	v0.87.1    
+loki                         	monitoring     	2       	2026-01-15 16:18:05.808410104 -0500 -0500	deployed	loki-6.49.0                           	3.6.3      
+longhorn                     	longhorn-system	1       	2026-01-15 06:34:44.751827808 -0500 -0500	deployed	longhorn-1.10.1                       	v1.10.1    
+metallb                      	metallb-system 	1       	2026-01-14 18:05:08.103167619 -0500 -0500	deployed	metallb-0.15.3                        	v0.15.3    
+nfs-cold                     	nfs-provisioner	1       	2026-01-15 15:51:36.141378514 -0500 -0500	deployed	nfs-subdir-external-provisioner-4.0.18	4.0.2      
+observability                	monitoring     	1       	2026-01-15 17:19:58.163428479 -0500 -0500	deployed	k8s-monitoring-3.7.2                  	3.7.2      
+observability-alloy-logs     	monitoring     	1       	2026-01-15 22:20:05.749615545 +0000 UTC  	deployed	alloy-1.5.2                           	v1.12.2    
+observability-alloy-singleton	monitoring     	1       	2026-01-15 22:20:05.749291933 +0000 UTC  	deployed	alloy-1.5.2                           	v1.12.2    

@@ -1,0 +1,13 @@
+defaultSettings:
+  defaultReplicaCount: 3
+  taintToleration: node-role.kubernetes.io/control-plane:NoSchedule
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: selfsigned-issuer
+  enabled: true
+  host: longhorn.lab
+  ingressClassName: nginx
+  tls: true
+persistence:
+  defaultClass: true
+  defaultDataPath: /var/lib/longhorn

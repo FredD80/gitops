@@ -1,0 +1,7 @@
+adminPassword: Shbang1!
+persistence:
+  annotations:
+    longhorn.io/numberOfReplicas: "1"
+  enabled: true
+  size: 5Gi
+  storageClass: longhorn
