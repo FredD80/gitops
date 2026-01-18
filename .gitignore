@@ -1,15 +1,20 @@
-# Secrets / credentials
+# Secrets directory
 secrets/
-**/*.pem
-**/*token*
-**/*credentials*
-**/*.key
-**/*.p12
 
-# Cloudflared sensitive files
+# Cloudflare Tunnel sensitive files
 **/cloudflared*.json
 **/multiverse.json
 **/*tunnel*.json
+**/*.pem
+**/cert.pem
+**/cloudflared.service.local
+
+# Terraform
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.backup
+**/crash.log
 
 # OS/editor junk
 .DS_Store
