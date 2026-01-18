@@ -1,12 +1,18 @@
-# --- never commit secrets ---
+# Secrets / credentials
 secrets/
 **/*.pem
-**/*.key
-**/*.crt
 **/*token*
 **/*credentials*
-**/*.json
+**/*.key
+**/*.p12
 
-# local/editor files
+# Cloudflared sensitive files
+**/cloudflared*.json
+**/multiverse.json
+**/*tunnel*.json
+
+# OS/editor junk
 .DS_Store
 *.swp
+*.swo
+*~
